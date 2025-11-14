@@ -146,6 +146,26 @@
             object-fit: contain;
         }
 
+        .project-image.grid-3-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            overflow: hidden;
+        }
+
+        .project-image.grid-3-2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .project-image.grid-3-2 img:nth-child(4),
+        .project-image.grid-3-2 img:nth-child(5) {
+            grid-column: span 1.5;
+        }
+
         /* Lightbox styles */
         .lightbox {
             display: none;
@@ -234,8 +254,12 @@
                     <h3 class="project-title">TAGGERS!</h3>
                     <span class="project-date">Jan 2025 - April 2025</span>
                 </div>
-                <div class="project-image">
-                    <img src="your-image-url.jpg" alt="TAGGERS!">
+                <div class="project-image grid-3-2">
+                    <img src="images/taggerstitle.png" alt="Image 1">
+                    <img src="images/taggersbark1.png" alt="Image 2">
+                    <img src="images/taggersbark2.png" alt="Image 3">
+                    <img src="images/taggersbiglevel.png" alt="Image 4">
+                    <img src="images/taggersdebug.png" alt="Image 5">
                 </div>
                 <p class="project-description">
                     This is a brief description of your project. Explain what it does, 
