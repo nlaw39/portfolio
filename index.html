@@ -52,11 +52,22 @@
             transform: translateY(-5px);
         }
 
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
         .project-title {
             font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 15px;
+            margin: 0;
             color: #4a9eff;
+        }
+
+        .project-date {
+            font-size: 0.9em;
+            color: #999;
         }
 
         .project-image {
@@ -90,6 +101,15 @@
             background-color: #3a8ee6;
         }
 
+        .project-link.in-progress {
+            background-color: #666;
+            cursor: default;
+        }
+
+        .project-link.in-progress:hover {
+            background-color: #666;
+        }
+
         .project-image img {
             width: 100%;
             height: 100%;
@@ -108,43 +128,116 @@
         <h2>Projects</h2>
         
         <div class="projects">
-            <!-- Project 1 -->
+            <!-- Project 1: Mutatio -->
             <div class="project-card">
-                <h3 class="project-title">Project Title 1</h3>
+                <div class="project-header">
+                    <h3 class="project-title">Mutatio</h3>
+                    <span class="project-date">Sept 2025 - Present</span>
+                </div>
                 <div class="project-image">
-                    <img src="https://cdn.discordapp.com/attachments/1414334597365235866/1438303384808718387/image.png?ex=691663e9&is=69151269&hm=90c8c5051af625397a1b347f1573fb714eb18117886eb8605d8b751220ca48ff" alt="Project 1">
+                    <img src="https://cdn.discordapp.com/attachments/1414334597365235866/1438303384808718387/image.png?ex=691663e9&is=69151269&hm=90c8c5051af625397a1b347f1573fb714eb18117886eb8605d8b751220ca48ff" alt="Mutatio">
                 </div>
                 <p class="project-description">
                     This is a brief description of your project. Explain what it does, 
                     what technologies you used, and what makes it interesting or unique.
                 </p>
-                <a href="https://github.com/yourusername/project" class="project-link" target="_blank">View Project</a>
+                <span class="project-link in-progress">In Progress</span>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Cafe Crumble -->
             <div class="project-card">
-                <h3 class="project-title">Project Title 2</h3>
+                <div class="project-header">
+                    <h3 class="project-title">Cafe Crumble</h3>
+                    <span class="project-date">July 2025</span>
+                </div>
                 <div class="project-image">
-                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Project 2">]
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Cafe Crumble">]
                 </div>
                 <p class="project-description">
-                    Another project description goes here. Talk about the problem it solves,
-                    how you built it, and any challenges you overcame during development.
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
                 </p>
-                <a href="https://github.com/yourusername/project2" class="project-link" target="_blank">View Project</a>
+                <a href="https://github.com/yourusername/cafe-crumble" class="project-link" target="_blank">View Project</a>
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 3: TAGGERS! -->
             <div class="project-card">
-                <h3 class="project-title">Project Title 3</h3>
+                <div class="project-header">
+                    <h3 class="project-title">TAGGERS!</h3>
+                    <span class="project-date">Jan 2025 - April 2025</span>
+                </div>
                 <div class="project-image">
-                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Project 3">]
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="TAGGERS!">]
                 </div>
                 <p class="project-description">
-                    A third project showcase. Include details about the features, your role
-                    if it was collaborative, and what you learned from building it.
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
                 </p>
-                <a href="https://github.com/yourusername/project3" class="project-link" target="_blank">View Project</a>
+                <a href="https://github.com/yourusername/taggers" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 4: Game Engines -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Game Engines</h3>
+                    <span class="project-date">Jan 2025 - April 2025</span>
+                </div>
+                <div class="project-image">
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Game Engines">]
+                </div>
+                <p class="project-description">
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
+                </p>
+                <a href="https://github.com/yourusername/game-engines" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 5: Paper Trail -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Paper Trail</h3>
+                    <span class="project-date">Sept 2024 - Dec 2024</span>
+                </div>
+                <div class="project-image">
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Paper Trail">]
+                </div>
+                <p class="project-description">
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
+                </p>
+                <a href="https://github.com/yourusername/paper-trail" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 6: Perlin Noise Terrain Generator -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Perlin Noise Terrain Generator</h3>
+                    <span class="project-date">Sept 2024 - Dec 2024</span>
+                </div>
+                <div class="project-image">
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Perlin Noise Terrain Generator">]
+                </div>
+                <p class="project-description">
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
+                </p>
+                <a href="https://github.com/yourusername/terrain-generator" class="project-link" target="_blank">View Project</a>
+            </div>
+
+            <!-- Project 7: Canopic Repose -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Canopic Repose</h3>
+                    <span class="project-date">Sept 2024 - Dec 2024</span>
+                </div>
+                <div class="project-image">
+                    [Screenshot placeholder - replace with <img src="your-image-url.jpg" alt="Canopic Repose">]
+                </div>
+                <p class="project-description">
+                    This is a brief description of your project. Explain what it does, 
+                    what technologies you used, and what makes it interesting or unique.
+                </p>
+                <a href="https://github.com/yourusername/canopic-repose" class="project-link" target="_blank">View Project</a>
             </div>
         </div>
     </div>
