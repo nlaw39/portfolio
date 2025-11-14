@@ -115,6 +115,7 @@
             height: 100%;
             object-fit: contain;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         .project-image iframe {
@@ -122,6 +123,54 @@
             height: 100%;
             border-radius: 5px;
             border: none;
+        }
+
+        .project-image.side-by-side {
+            display: flex;
+            gap: 10px;
+        }
+
+        .project-image.side-by-side img {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lightbox-close:hover {
+            color: #ccc;
         }
     </style>
 </head>
@@ -158,7 +207,8 @@
                     <span class="project-date">July 2025</span>
                 </div>
                 <div class="project-image">
-                    <img src="images/cafecrumble1.jpg" alt="Cafe Crumble">
+                    <img src="images/cafecrumble1.png" alt="Cafe Crumble">
+                    <img src="images/cafecrumble2.png" alt="Cafe Crumble">
                 </div>
                 <p class="project-description">
                     This is a brief description of your project. Explain what it does, 
@@ -270,5 +320,33 @@
             </div>
         </div>
     </div>
+
+    <!-- Lightbox for enlarged images -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <script>
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = imgSrc;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Add click listeners to all project images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.project-image img');
+            images.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(this.src);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
