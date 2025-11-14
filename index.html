@@ -128,11 +128,14 @@
         .project-image.side-by-side {
             display: flex;
             gap: 10px;
+            overflow: hidden;
         }
 
         .project-image.side-by-side img {
             flex: 1;
             cursor: pointer;
+            height: 100%;
+            object-fit: contain;
         }
 
         /* Lightbox styles */
